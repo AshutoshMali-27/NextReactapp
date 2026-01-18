@@ -1,0 +1,5 @@
+// src/utils/error.util.ts
+export function getErrorMessage(error: unknown): string {
+  if (error instanceof Error) return error.message;
+  return "Unexpected error occurred";
+}
