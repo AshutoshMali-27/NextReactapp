@@ -1,26 +1,32 @@
 @import "tailwindcss";
 
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* ---------- Theme tokens ---------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --sidebar-bg: 255 255 255;
+  --sidebar-text: 30 41 59;
+  --sidebar-hover: 241 245 249;
+  --sidebar-active: 226 232 240;
+  --sidebar-border: 226 232 240;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --sidebar-bg: 15 23 42;
+  --sidebar-text: 226 232 240;
+  --sidebar-hover: 30 41 59;
+  --sidebar-active: 51 65 85;
+  --sidebar-border: 30 41 59;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Example future theme */
+.theme-blue {
+  --sidebar-bg: 30 58 138;
+  --sidebar-text: 239 246 255;
+  --sidebar-hover: 37 99 235;
+  --sidebar-active: 59 130 246;
+  --sidebar-border: 37 99 235;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
